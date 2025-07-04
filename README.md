@@ -41,4 +41,3 @@ Your task is to complete the `TODO` items found in the source files located in t
 
 PS: You can commit and push as often as you like and GitHub Actions will re-evaluate your code every time.
 You will need to look through the auto-grader logs (in the "Actions" tab) to see what exactly you got right or wrong.
-
