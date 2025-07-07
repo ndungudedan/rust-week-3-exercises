@@ -19,12 +19,12 @@ mod tests {
             (65535u64, vec![0xFD, 0xFF, 0xFF]),
             (65536u64, vec![0xFE, 0x00, 0x00, 0x01, 0x00]),
             (4294967295u64, vec![0xFE, 0xFF, 0xFF, 0xFF, 0xFF]),
-            (4294967296u64, 
-             vec![
-                0xFF, 0x00, 0x00, 0x00, 0x00, 0x01, 0x00, 0x00, 0x00,
-            ]),
+            (
+                4294967296u64,
+                vec![0xFF, 0x00, 0x00, 0x00, 0x00, 0x01, 0x00, 0x00, 0x00],
+            ),
         ];
-
+    
         for (value, bytes) in tests {
             let cs = CompactSize::new(value);
             assert_eq!(cs.to_bytes(), bytes);
